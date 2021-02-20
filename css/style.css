@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
+
+@media(max-width:500px){
+    .container{
+        margin-top:1% !important;
+        padding-left:-1% !important;
+        width:90%  !important;
+    }
+    .container form{   
+        row-gap: 30px !important;
+        column-gap:10px !important;
+        padding-left:0% !important;
+        grid-template-columns: 1fr !important;
+
+    
+    }
+    form >*{
+        
+        padding-left:4em;
+      
+    }
+   
+    input{
+        width:70% !important;
+
+    }
+    .radio{
+        width:auto !important;
+    }
+    .btn{
+        width:98% !important;
+    }
+    .sub-news{
+        margin-left:20px;
+       
+    }
+    .subscribe{
+        margin-left: 30px !important;
+    }
+    .lname{
+        width:220px !important;
+    }
+    .phone{
+        width:200px !important;
+
+    }
+    .pass{
+        width:220px !important;
+
+    }
+    .paddr{
+        width:220px !important;
+
+    }
+    
+   
+   
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background:#141313;
+    color:white;
+    padding: 1em;
+    line-height: 1.6em;
+    font-family:"Inconsolata",monospace;
+}
+
+.container{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    /*box-shadow: 0 0 20px gray;*/
+    background: #2e2e2e;
+    margin-top: 7%;
+    
+   
+}
+.container > *{
+    padding:1em;
+    padding-left: 3em;
+}
+.fas{
+    color:white;
+    
+}
+.container form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+    column-gap:20px ;
+
+}
+.container form div{
+    margin: 0;
+}
+input[type="text"],input[type="password"],input[type="email"]{
+    border:none;
+    border-bottom: 1px solid white;   
+    outline: none;
+    color: white;   
+    background: none;    
+}
+input[type="tel"]{
+
+    border: none;
+    color: white;
+    border-bottom: 1.5px solid white;
+    background: none;  
+    outline: none;
+
+}
+
+::placeholder{
+    color:white;
+    opacity:1;
+    font-size: 17px;
+    
+    font-family:"Inconsolata",monospace;
+    line-height: 1.6em;
+}
+
+ 
+input:focus::placeholder {
+    color: transparent;
+  }
+input:active{
+    background:transparent;
+
+}
+.phone{
+width:67%;
+}
+.city-name{
+    width:65.5%;
+}
+.lname{
+    width:74.5%;
+}
+.pass{
+    width:73.5%;
+}
+.paddr{
+    width:76.5%;
+}
+select{
+    background: none;
+    outline: none;
+    color:white;
+    border-radius: 4px;
+    width: 180px;
+    height:28px;
+    border-color: white;
+}
+
+option{
+    background:#2e2e2e;
+  
+}
+.btn{
+    cursor: pointer;
+    font-size:1.5em;
+    background: none;
+    color:white;
+    width:9.5em;
+    height:1.5em;
+    outline:none;
+    border-radius: 25px;
+    border-color: white;
+    display: inline-block;
+    box-shadow: 2px 1px 0 0 rgba(255, 255, 255, 0.986), -2px -1px 0 0 rgba(255,255,255,0.986);
+}
+.btn:hover,btn:focus{
+    background-color:#3a589e;
+    box-shadow: none;
+    border-color: none;
+  
+}
