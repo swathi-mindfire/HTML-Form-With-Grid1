@@ -52,6 +52,10 @@
         width:220px !important;
 
     }
+	.submit{
+		position:relative;
+		left:-20px!important;
+	}
     
    
    
@@ -171,6 +175,11 @@ option{
     border-color: white;
     display: inline-block;
     box-shadow: 2px 1px 0 0 rgba(255, 255, 255, 0.986), -2px -1px 0 0 rgba(255,255,255,0.986);
+	
+}
+.submit{
+	position:relative;
+	left:49%;
 }
 .btn:hover,btn:focus{
     background-color:#3a589e;
