@@ -1,104 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
 
-@media(max-width:500px){
-    .container{
-        margin-top:1% !important;
-        padding-left:-1% !important;
-        width:90%  !important;
+@media(max-width:1250px)and (min-width:850px){
+    .form-container{
+        width:900px !important;
+        margin-left: 10vw !important;
     }
-    .container form{   
-        row-gap: 30px !important;
-        column-gap:10px !important;
-        padding-left:0% !important;
-        grid-template-columns: 1fr !important;
+     .form-container *{
+        padding-left:20px !important;
+    }
 
-    
+}
+@media(max-width:800px){
+    body{
+        background-color:  #2e2e2e !important;
+
     }
-    form >*{
-        
-        padding-left:4em;
+    .form-container{
+       flex-direction: column !important;
+       width:450px !important;
+       margin-left: 2vw !important;
+       margin-right: 0vw;
       
     }
-   
-    input{
-        width:70% !important;
+    .submit{
+        
+        margin-left:9vw;
+    }
 
-    }
-    .radio{
-        width:auto !important;
-    }
-    .btn{
-        width:98% !important;
-    }
-    .sub-news{
-        margin-left:20px;
-       
-    }
-    .subscribe{
-        margin-left: 30px !important;
-    }
-    .lname{
-        width:220px !important;
-    }
-    .phone{
-        width:200px !important;
-
-    }
-    .pass{
-        width:220px !important;
-
-    }
-    .paddr{
-        width:220px !important;
-
-    }
-	.submit{
-		position:relative;
-		left:-20px!important;
-	}
-    
-   
-   
 }
+
+
+
+
 *{
     box-sizing: border-box;
-}
-body{
-    background:#141313;
     color:white;
-    padding: 1em;
-    line-height: 1.6em;
-    font-family:"Inconsolata",monospace;
 }
 
-.container{
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-    /*box-shadow: 0 0 20px gray;*/
-    background: #2e2e2e;
-    margin-top: 7%;
-    
-   
+body{
+    background-color: #141313;
 }
-.container > *{
-    padding:1em;
-    padding-left: 3em;
+h1{
+    text-align: center;
+}
+
+.form-container{
+    background-color:  #2e2e2e;
+    max-width:650px;
+    padding:50px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+    margin-left:25vw;
+    margin-top:5vh;
+    margin-right:20vw;
+    padding-top:10vh;
+    padding-bottom: 0vh;
+}
+.form-container *{
+    margin-bottom: 20px;
+    
 }
 .fas{
-    color:white;
-    
-}
-.container form{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 30px;
-    column-gap:20px ;
-
-}
-.container form div{
-    margin: 0;
+    color:white
 }
 input[type="text"],input[type="password"],input[type="email"]{
     border:none;
@@ -108,15 +75,12 @@ input[type="text"],input[type="password"],input[type="email"]{
     background: none;    
 }
 input[type="tel"]{
-
     border: none;
     color: white;
     border-bottom: 1.5px solid white;
     background: none;  
     outline: none;
-
 }
-
 ::placeholder{
     color:white;
     opacity:1;
@@ -125,8 +89,6 @@ input[type="tel"]{
     font-family:"Inconsolata",monospace;
     line-height: 1.6em;
 }
-
- 
 input:focus::placeholder {
     color: transparent;
   }
@@ -134,36 +96,26 @@ input:active{
     background:transparent;
 
 }
-.phone{
-width:67%;
-}
-.city-name{
-    width:65.5%;
-}
-.lname{
-    width:74.5%;
-}
-.pass{
-    width:73.5%;
-}
-.paddr{
-    width:76.5%;
-}
 select{
     background: none;
     outline: none;
     color:white;
     border-radius: 4px;
-    width: 180px;
+    width: 140px;
     height:28px;
     border-color: white;
 }
-
 option{
     background:#2e2e2e;
   
 }
-.btn{
+.country,.state,.subscribe,.submit,.sub-news-text{
+    font-family:"Inconsolata",monospace;
+}
+#sub-text{
+    margin-left:-10px;
+}
+#btn{
     cursor: pointer;
     font-size:1.5em;
     background: none;
@@ -177,13 +129,13 @@ option{
     box-shadow: 2px 1px 0 0 rgba(255, 255, 255, 0.986), -2px -1px 0 0 rgba(255,255,255,0.986);
 	
 }
-.submit{
-	position:relative;
-	left:49%;
-}
-.btn:hover,btn:focus{
+#btn:hover{
     background-color:#3a589e;
     box-shadow: none;
     border-color: none;
   
+}
+.submit{
+    flex-basis: 100%;
+    margin-left:12vw;
 }
