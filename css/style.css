@@ -20,12 +20,17 @@
        width:450px !important;
        margin-left: 2vw !important;
        margin-right: 0vw;
+	   margin-top:0vh !important;
       
     }
     .submit{
         
         margin-left:9vw;
     }
+	h1{
+    text-align: left;
+	font-size:18px;
+}
 
 }
 
