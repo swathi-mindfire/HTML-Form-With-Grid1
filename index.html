@@ -6,54 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="js/formValidation.js"></script>
     <title>Responsive form with flex-layout</title>
 </head>
 <body>
     <h1>Registration from with f lex-layout</h1>
 
-    <form action="" class="form-container">
+    <form class="form-container" method="post" name="reg-form" onsubmit = "return inputCheck()" action="welcome.html">
         <div class="fname">
             <i class="fas fa-user"></i>
-            <input type="text" name="fnmae" placeholder="First Name" id="fname" required>
+            <input type="text" name="fnmae" placeholder="First Name " id="fname">
+            <span class= "fnamereq">*</span>
         </div>        
         <div class="lname">
-            <input type="text" name="lnmae" placeholder="Last Name"  id="lname"required> 
+            <input type="text" name="lnmae" placeholder="Last Name"  id="lname"> 
+            <span class= "lnamereq">*</span>
        </div>
        <div class="mail">
             <i class="fas fa-envelope"></i>
-            <input type="email" name="email" placeholder="Email" id="mail"required >
+            <!--<input type="email" name="email" placeholder="Email" id="mail1" > -->
+            <input type="text" name="email" placeholder="Email" id="mail1" >
+            <span class= "mailreq">*</span>
        </div>
        <div class="mobile">
             <i class="fas fa-mobile-alt"></i>
-            <input type="tel" name="mobile" placeholder="Mobile Number" id="mobile"required>
+            <input type="tel" name="mobile" placeholder="Mobile Number" id="mobile">
+            <span class= "mobilereq">*</span>
         </div>
         <div class="pwd1">
             <i class="fas fa-lock"></i>
-            <input type="password" name="password"placeholder="Password" id="pwd1"required> 
+            <input type="password" name="pwd1"placeholder="Password" id="pwd1">
+            <span class= "pwd1req">*</span> 
         </div>
 
         <div class="pwd2">
-            <input type="password" name="cpassword" placeholder="Confirm Password"class="pass"required id="pwd2">
+            <input type="password" name="cpassword" placeholder="Confirm Password"class="pass"r id="pwd2">
+            <span class= "pwd2req">*</span> 
        </div>
         <div class="radio">               
-            <input type="radio" name="gender" id="radio"><span class="radio-text">Male</span>
+            <input type="radio" name="gender" id="radio"><span class="radio-text"></span>Male</span>
             <input type="radio" name="gender"id="radio"><span class="radio-text">Female</span>
             <input type="radio" name="gender" id="radio"> <span class="radio-text">other</span>
         </div>
         <div class="city">
             <i class="fas fa-city"></i>
-            <input type="text" name="city" placeholder="City Name" id="city"required>
+            <input type="text" name="city" placeholder="City Name" id="city">
+            <span class= "cityreq">*</span>
         </div>
         <div class="caddress">
             <i class="fas fa-map-marker-alt"></i>
-            <input type="text" name="caddr" placeholder="Address1" id="caddress"required>
+            <input type="text" name="caddr" placeholder="Address1" id="caddress">
+            <span class= "addr1req">*</span>
         </div>
         <div class="paddress">
-            <input type="text" name="paddr" placeholder="Address2" id="paddress"required>
+            <input type="text" name="paddr" placeholder="Address2" id="paddress">
+            <span class= "addr2req">*</span>
         </div>
         <div class="country">
             <span class="country-text">country</span>
-            <select name="country-list" id="country"required>
+            <select name="country-list" id="country">
+                <option value="0">Select country</option>
                 <option value="Britan">Britan</option>
                 <option value="Germany">Germany</option>
                 <option value="India">India</option>
@@ -63,7 +75,8 @@
         </div>
         <div class="state">
             <span class="select-text state-text">State</span>
-            <select name="state-list"id="state" required>
+            <select name="state-list"id="state">
+                <option value="0">Select State</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                 <option value="Assam">Assam</option>
@@ -115,6 +128,37 @@
        
        
     </form>
+
+    <script>
+
+            function formValidation(){
+
+
+                var firstName = document.getElementById("fname").value;
+                var lastName = document.getElementById('lname').value;
+                var mail = document.getElementById('mail').value;
+                var mobile = document.getElementById('mobile').value;
+                var password1 = document.getElementById('pwd1').value;
+                var password2 = document.getElementById('pwd2').value;
+
+                var namereg = /^[a-zA-Z]+$/;
+                var mailreg = /^ [a-zA-Z0-9._-]+@[a-zA-Z]+.[a-zA-Z]{2,}$/;
+                mobilereg = /^[0-9]{10}$/;
+
+                var flag=1;
+
+
+                if(firstName.trim()=="" && flag == 1){
+                    alert("Plese Enter First Name");
+                    flag = 0;
+                }
+
+                if (!(firstName.match(namereg)) && flag == 1){
+                    alert("Enter valid First Name")
+                    return false;
+                }
+            }
+    </script>
     
 
     

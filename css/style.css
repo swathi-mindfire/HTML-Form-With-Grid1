@@ -120,6 +120,92 @@ option{
 #sub-text{
     margin-left:-10px;
 }
+/*
+.required{
+    color:red;
+}
+
+
+ input ::placeholder :after{
+
+
+    content : "*";
+    color :red;
+
+}
+
+
+ ::-webkit-input-placeholder ::after{
+     content: "*";
+     color: red;
+ }
+
+ */
+ /*.fnamereq{
+     color:red;
+     position:absolute;
+     left:560px;
+ }
+
+ .lnamereq{
+    color:red;
+    position:absolute;
+    left:810px;
+}
+
+.mailreq{
+    color:red;
+    position:absolute;
+    left:510px;
+}
+
+.mobilereq{
+   color:red;
+   position:absolute;
+   left:850px;
+}
+
+.pwd1req{
+    color:red;
+    position:absolute;
+    left:540px;
+}
+
+.pwd2req{
+   color:red;
+   position:absolute;
+   left:870px;
+}
+
+
+.cityreq{
+    color:red;
+    position:absolute;
+    left:820px;
+}
+.addr1req{
+    color:red;
+    position:absolute;
+    left:540px;
+ }
+
+.addr2req{
+   color:red;
+   position:absolute;
+   left:810px;
+}
+*/
+
+/*::-webkit-input-placeholder:after{
+    content : "m";
+}
+*/
+
+
+
+
+
+
 #btn{
     cursor: pointer;
     font-size:1.5em;
